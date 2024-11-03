@@ -13,6 +13,9 @@
 
  pip install notebook
 
+# start jupyter notebook
+run jupyter notebook
+
 # 4. install NumPy matplotlib
 
   pip install NumPy matplotlib
