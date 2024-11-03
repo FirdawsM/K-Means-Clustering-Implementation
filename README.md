@@ -32,13 +32,17 @@ from kmeans import KMeans  # Replace 'kmeans' with the actual module name if dif
  from sklearn.datasets import make_blobs
 
 # Generate synthetic data
+```
   X, true_labels = make_blobs(n_samples=300, centers=4, random_state=42)
-
+```
 # Instantiate and fit the KMeans model
+```
   kmeans = KMeans(k=4)
   cluster_assignments, centroids = kmeans.fit(X)
+```
 
 # Visualize the results
+```
  import matplotlib.pyplot as plt
 
  plt.scatter(X[:, 0], X[:, 1], c=cluster_assignments, s=30, cmap='viridis')
@@ -48,3 +52,5 @@ from kmeans import KMeans  # Replace 'kmeans' with the actual module name if dif
  plt.ylabel("Feature 2")
  plt.legend()
  plt.show()
+
+```
