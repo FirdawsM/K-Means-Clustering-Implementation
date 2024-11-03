@@ -1,0 +1,24 @@
+### Installation
+
+## 'requirements.txt'
+# 1. install pip if not already there otherwise skip to step pip installed
+
+  python get-pip.py
+
+# 2. check pip version installed
+
+ pip --version
+
+# 3. install notebook
+
+ pip install notebook
+
+# 4. install NumPy matplotlib
+
+  pip install NumPy matplotlib
+
+# 5. install scikit-learn
+
+  pip install scikit-learn
+
+ 
