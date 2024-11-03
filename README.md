@@ -13,13 +13,19 @@ List the software and libraries required to run your project. Include installati
 - Matplotlib
 - scikit-learn
 
-
 ### Installation
-Step-by-step instructions on how to set up your environment and run your code.
+Follow these steps to set up your environment and run the code:
 
-1. Clone the repository or download the code.
+1. **Clone the repository** or **download the code** to your local machine:
+   ```
+   git clone https://github.com/FirdawsM/K-Means-Clustering-Implementation.git
+
 2. Navigate to the project directory.
 3. Install the required packages.
+ 
+ ```
+    pip install -r requirements.txt
+```
 
 ### Usage
 from kmeans import KMeans  # Replace 'kmeans' with the actual module name if different
