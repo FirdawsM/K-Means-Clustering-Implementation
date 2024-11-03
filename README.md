@@ -22,15 +22,23 @@ Step-by-step instructions on how to set up your environment and run your code.
 3. Install the required packages.
 
 ### Usage
-How to use your implementation. Include code snippets or examples. For example:
-```python
-from your_kmeans_module import KMeans
+from kmeans import KMeans  # Replace 'kmeans' with the actual module name if different
+from sklearn.datasets import make_blobs
+
+# Generate synthetic data
+X, true_labels = make_blobs(n_samples=300, centers=4, random_state=42)
 
 # Instantiate and fit the KMeans model
 kmeans = KMeans(k=4)
-kmeans.fit(X)
-pytest tests/
+cluster_assignments, centroids = kmeans.fit(X)
 
-### Running Tests
+# Visualize the results
+import matplotlib.pyplot as plt
 
-pytest tests/
+plt.scatter(X[:, 0], X[:, 1], c=cluster_assignments, s=30, cmap='viridis')
+plt.scatter(centroids[:, 0], centroids[:, 1], s=300, c='red', marker='X', label='Centroids')
+plt.title("K-Means Clustering Results")
+plt.xlabel("Feature 1")
+plt.ylabel("Feature 2")
+plt.legend()
+plt.show()
